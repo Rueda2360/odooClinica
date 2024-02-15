@@ -1,0 +1,39 @@
+<odoo>
+  <data>
+
+
+  <menuitem name="Clinica" id="clinica_menu_root" />
+
+
+  <menuitem name="Medico" id="clinica_menu_medico_list" parent="clinica_menu_root" action="view_clinica_medico_tree" />
+  <menuitem name="Paciente" id="clinica_menu_paciente_list" parent="clinica_menu_root" action="view_clinica_paciente_tree" />
+
+
+    <record id="view_clinica_paciente_tree" model="ir.ui.view">
+        <field name="name">Lista de Pacientes</field>
+        <field name="model">clinica.paciente</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="sintomas"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_clinica_medico_tree" model="ir.ui.view">
+        <field name="name">Lista de Médicos</field>
+        <field name="model">clinica.medico</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="numero_colegiado"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+
+  </data>
+</odoo>
