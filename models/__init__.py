@@ -3,3 +3,4 @@
 # Si creamos mas modelos, deben importarse en este fichero
 from . import clinica_medico
 from . import clinica_paciente
+from . import clinica_diagnostico

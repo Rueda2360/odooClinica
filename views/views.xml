@@ -18,11 +18,18 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id='clinica_diagnostico_action' model='ir.actions.act_window'>
+        <field name="name">Biblioteca de Diagnósticos</field>
+        <field name="res_model">clinica.diagnostico</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
 
     <!-- Simple menu item, sin más utilidad que la didáctica -->
     <menuitem name="Mi Clínica" id="clinica_base_menu" />
     <menuitem name="Pacientes" id="clinica_paciente_menu" parent="clinica_base_menu" action="clinica_paciente_action"/>
     <menuitem name="Médicos" id="clinica_medico_menu" parent="clinica_base_menu" action="clinica_medico_action"/>
+    <menuitem name="Diagnostico" id="clinica_diagnostico_menu" parent="clinica_base_menu" action="clinica_diagnostico_action"/>
 
     <record id="view_clinica_paciente_tree" model="ir.ui.view">
         <field name="name">Lista de Pacientes</field>
@@ -36,6 +43,7 @@
         </field>
     </record>
 
+    
 
     <record id="view_clinica_medico_tree" model="ir.ui.view">
         <field name="name">Lista de Médicos</field>
@@ -49,6 +57,18 @@
         </field>
     </record>
 
+    <record id="view_clinica_diagnostico_tree" model="ir.ui.view">
+        <field name="name">Lista de Diagnósticos</field>
+        <field name="model">clinica.diagnostico</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="idPaciente"/>
+                <field name="idMedico"/>
+                <field name="fecha_diagnostico"/>
+                <field name="diagnostico"/>
+            </tree>
+        </field>
+    </record>
 
 
 

@@ -9,3 +9,5 @@ class ClinicaMedico(models.Model):
     nombre = fields.Char('Nombre')
     apellidos = fields.Char('Apellido')
     numero_colegiado = fields.Char('Número de Colegiado')
+    
+    idDiagnostico = fields.One2many('clinica.diagnostico', 'idMedico', string='Diagnósticos')
