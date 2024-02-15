@@ -57,8 +57,10 @@
         <field name="model">clinica.diagnostico</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="nombreCompletoPaciente"/>
-                <field name="nombreCompletoMedico"/>
+                <field name="nombrePaciente"/>
+                <field name="apellidosPaciente"/>
+                <field name="nombreMedico"/>
+                <field name="apellidosMedico"/>
                 <field name="fecha_diagnostico"/>
                 <field name="diagnostico"/>
             </tree>
