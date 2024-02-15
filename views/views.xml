@@ -5,9 +5,24 @@
   <menuitem name="Clinica" id="clinica_menu_root" />
 
 
-  <menuitem name="Medico" id="clinica_menu_medico_list" parent="clinica_menu_root" action="view_clinica_medico_tree" />
-  <menuitem name="Paciente" id="clinica_menu_paciente_list" parent="clinica_menu_root" action="view_clinica_paciente_tree" />
+   <record id='clinica_paciente_action' model='ir.actions.act_window'>
+        <field name="name">Biblioteca de Pacientes</field>
+        <field name="res_model">clinica.paciente</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
+
+    <record id='clinica_medico_action' model='ir.actions.act_window'>
+        <field name="name">Biblioteca de Médicos</field>
+        <field name="res_model">clinica.medico</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Simple menu item, sin más utilidad que la didáctica -->
+    <menuitem name="Mi Clínica" id="clinica_base_menu" />
+    <menuitem name="Pacientes" id="clinica_paciente_menu" parent="clinica_base_menu" action="clinica_paciente_action"/>
+    <menuitem name="Médicos" id="clinica_medico_menu" parent="clinica_base_menu" action="clinica_medico_action"/>
 
     <record id="view_clinica_paciente_tree" model="ir.ui.view">
         <field name="name">Lista de Pacientes</field>
@@ -15,6 +30,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="nombre"/>
+                <field name="apellidos"/>
                 <field name="sintomas"/>
             </tree>
         </field>
@@ -27,6 +43,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="nombre"/>
+                <field name="apellidos"/>
                 <field name="numero_colegiado"/>
             </tree>
         </field>

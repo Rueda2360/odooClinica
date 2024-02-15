@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Lista de tareas",
+    'name': "Odoo Clínica",
 
     'summary': """
-    Sencilla Lista de tareas""",
+    Clínica en odoo""",
 
     'description': """
-    Sencilla lista de tareas utilizadas para crear un nuevo módulo con un nuevo modelo de datos
+    
     """,
 
-    'author': "Sergi García",
-    'website': "https://apuntesfpinformatica.es",
+    'author': "Alejandro Rueda",
+    'website': "https://google.es",
     #Indicamos que es una aplicación
     'application': True,
 
@@ -33,3 +33,4 @@
         'views/views.xml',
     ]
 }
+
