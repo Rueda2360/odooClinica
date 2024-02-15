@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 acl_medico,clinica.medico,model_clinica_medico,,1,1,1,1
 acl_paciente,clinica.paciente,model_clinica_paciente,,1,1,1,1
+acl_diagnostico,clinica.diagnostico,model_clinica_diagnostico,,1,1,1,1
