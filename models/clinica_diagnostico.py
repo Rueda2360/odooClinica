@@ -12,11 +12,11 @@ class ClinicaDiagnostico(models.Model):
     diagnostico = fields.Text('Diagnóstico')
 
     nombrePaciente = fields.Char(related='idPaciente.nombre', string='Nombre del Paciente')
-    apellidosPaciente = fields.Char(related='idPaciente.apellidos', string='Nombre del Paciente')
+    apellidosPaciente = fields.Char(related='idPaciente.apellidos', string='Apellidos del Paciente')
     
 
-    nombreMedico = fields.Char(related='idMedico.nombre', string='Nombre del Paciente')
-    apellidosMedico = fields.Char(related='idMedico.apellidos', string='Nombre del Paciente')
+    nombreMedico = fields.Char(related='idMedico.nombre', string='Nombre del Médico')
+    apellidosMedico = fields.Char(related='idMedico.apellidos', string='Apellidos del Médico')
 
     
     _sql_constraints = [
